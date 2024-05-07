@@ -2,8 +2,8 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 // import { navList } from "./Navigation";
 import { AuthData } from "./AuthWrapper";
-// import { Login } from "../pages/login/Login";
 import { items } from "../components/header/navbar/Navigation";
+import { Login } from "../login/Login";
 
 export const isAuthorisedRoute = (user, r, isMenu) => {
   let allowed = false;
@@ -33,7 +33,7 @@ export const RenderRoutes = () => {
           return <Route key={i} path={r.path} element={r.element} />;
       })}
 
-      {/* {!user.isAuthenticated && <Route path="/login" element={<Login />} />} */}
+      {!user.isAuthenticated && <Route path="/login" element={<Login />} />}
 
       {!user.isAuthenticated && (
         <Route

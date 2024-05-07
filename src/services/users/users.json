@@ -1,25 +1,39 @@
 [
   {
-    "userName": "Surbhi",
-    "password": "surbhi",
+    "userName": "Karshma",
+    "password": "karishma",
     "permissions": [
-      "editMovie",
-      "addMovie",
-      "editEvent",
-      "deleteEvent",
-      "addEvent"
+      "addMatch",
+      "editMatch",
+      "deleteMatch",
+      "addTeam",
+      "editTeam",
+      "deleteTeam",
+      "addPlayer",
+      "editPlayer",
+      "deletePlayer"
     ]
   },
   {
-    "userName": "Pooja",
-    "password": "pooja",
+    "userName": "Anushka",
+    "password": "anushka",
+    "permissions": ["addMatch", "addTeam", "addPlayer"]
+  },
+  {
+    "userName": "Sumit",
+    "password": "sumit",
     "permissions": [
-      "editMovie",
-      "deleteMovie",
-      "addMovie",
-      "editEvent",
-      "deleteEvent",
-      "addEvent"
+      "editMatch",
+      "deleteMatch",
+      "editTeam",
+      "deleteTeam",
+      "editPlayer",
+      "deletePlayer"
     ]
+  },
+  {
+    "userName": "Anisha",
+    "password": "anisha",
+    "permissions": []
   }
 ]
