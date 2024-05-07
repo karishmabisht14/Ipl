@@ -1,4 +1,4 @@
-import { Dropdown, Menu, Layout, Image, Typography, Flex } from "antd";
+import { Dropdown, Menu, Layout, Image, Typography, Flex, Button } from "antd";
 import React from "react";
 import bgg from "../../../image/header-logo-bomb-left.svg";
 import {
@@ -9,14 +9,15 @@ import {
 import { items } from "./Navigation";
 import { AuthData } from "../../../auth/AuthWrapper";
 import { isAuthorisedRoute } from "../../../auth/RenderNavigation";
-import { Link } from "react-router-dom";
 import LanguageSelector from "../../../pages/home/LanguageSelector";
 import { TranslateFunction } from "../../../utils/internationalisation";
+import { useNavigate, Link } from "react-router-dom";
 
 const { Header } = Layout;
 
 const Navbar = () => {
   const { user, logout } = AuthData();
+  const nav = useNavigate();
 
   // console.log('location from state', user)
 
@@ -26,6 +27,12 @@ const Navbar = () => {
   });
   console.log("llllllllll", list);
   const labels = TranslateFunction("labels");
+
+  // const navigateUrl = (e) => {
+  //   console.log("click ", e);
+  //   nav(e.key);
+  //   //setCurrent(e.key);
+  // };
 
   const subMenu = (submenu) => (
     <Menu style={{ backgroundColor: "#19398a" }}>
@@ -152,9 +159,10 @@ const Navbar = () => {
             <React.Fragment key={item.key}>
               {item.label === "matches" ? (
                 <Dropdown overlay={subMenu(item.submenu)} key={item.key}>
-                  <a
+                  <Link
+                    to={item.key}
                     className="ant-dropdown-link"
-                    onClick={(e) => e.preventDefault()}
+                    // onClick={navigateUrl}
                     style={{
                       marginTop: "1px",
                       margin: "0 20px",
@@ -162,10 +170,10 @@ const Navbar = () => {
                     }}
                   >
                     {labels(item.label)}
-                  </a>
+                  </Link>
                 </Dropdown>
               ) : (
-                <a href={item.path}>
+                <Link to={item.key}>
                   <Menu.Item
                     key={item.key}
                     style={{
@@ -176,10 +184,37 @@ const Navbar = () => {
                   >
                     {labels(item.label)}
                   </Menu.Item>
-                </a>
+                </Link>
               )}
             </React.Fragment>
           ))}
+
+          <div
+            style={{
+              flex: 0,
+              display: "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+            }}
+          >
+            {user.isAuthenticated ? (
+              <div className="menuItem">
+                <Link to={"#"} onClick={logout}>
+                  <Button style={{ backgroundColor: "rgb(248,68,100)" }}>
+                    Log out
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <div className="menuItem">
+                <Link to={"login"}>
+                  <Button style={{ backgroundColor: "rgb(248,68,100)" }}>
+                    Log in
+                  </Button>
+                </Link>
+              </div>
+            )}
+          </div>
         </Menu>
       </Header>
     </>
