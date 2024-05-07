@@ -1,0 +1,25 @@
+[
+  {
+    "userName": "Surbhi",
+    "password": "surbhi",
+    "permissions": [
+      "editMovie",
+      "addMovie",
+      "editEvent",
+      "deleteEvent",
+      "addEvent"
+    ]
+  },
+  {
+    "userName": "Pooja",
+    "password": "pooja",
+    "permissions": [
+      "editMovie",
+      "deleteMovie",
+      "addMovie",
+      "editEvent",
+      "deleteEvent",
+      "addEvent"
+    ]
+  }
+]

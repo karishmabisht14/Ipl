@@ -1,0 +1,436 @@
+[
+    {
+        "playerId": 1,
+        "playerName": "Virat Kohli",
+        "dob": "1988-11-05",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Virat.png",
+        "iplDebut": 2008,
+        "innings": 207,
+        "runs": 6076,
+        "batting_strike_rate": 130,
+        "batting_average": 38.16,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 2,
+        "playerName": "Rohit Sharma",
+        "dob": "1987-04-30",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Rohit.png",
+        "iplDebut": 2008,
+        "innings": 204,
+        "runs": 5480,
+        "batting_strike_rate": 130,
+        "batting_average": 31.47,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 3,
+        "playerName": "Jasprit Bumrah",
+        "dob": "1993-12-06",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Jasprit.png",
+        "iplDebut": 2013,
+        "innings": 128,
+        "runs": 57,
+        "batting_strike_rate": "",
+        "batting_average": "",
+        "bowling_strike_rate": 18.91,
+        "bowling_average": "23.30",
+        "economy": 7.39,
+        "wickets": 145,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 4,
+        "playerName": "Shreyas Iyer",
+        "dob": "1994-12-06",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Shreyas.png",
+        "iplDebut": 2015,
+        "innings": 104,
+        "runs": 2833,
+        "batting_strike_rate": 125.86,
+        "batting_average": 31.48,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 5,
+        "playerName": "Kagiso Rabada",
+        "dob": "1995-05-25",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Kagiso.png",
+        "iplDebut": 2017,
+        "innings": 47,
+        "runs": 31,
+        "batting_strike_rate": 123,
+        "batting_average": 10.33,
+        "economy": 8.21,
+        "wickets": 61,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 6,
+        "playerName": "MS Dhoni",
+        "dob": "07-07-1981",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Dhoni.png",
+        "iplDebut": 2008,
+        "innings": 250,
+        "runs": 5082,
+        "batting_strike_rate": 135.2,
+        "batting_average": 38.79,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 7,
+        "playerName": "Suryakumar Yadav",
+        "dob": "14-09-1990",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Surya.png",
+        "iplDebut": 2012,
+        "innings": 139,
+        "runs": 3249,
+        "batting_strike_rate": 143.32,
+        "batting_average": 32.17,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 8,
+        "playerName": "Mukesh Choudhary",
+        "dob": "06-07-1996",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Mukesh.png",
+        "iplDebut": 2022,
+        "innings": 13,
+        "runs": "",
+        "bowling_strike_rate": 17.06,
+        "bowling_average": 26.50,
+        "economy": 9.32,
+        "wickets": 16,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 9,
+        "playerName": "Ravindra Jadeja",
+        "dob": "06-12-1988",
+        "specialization": "all-rounder",
+        "photo": "assets/players/playersPhoto/Ravindra.png",
+        "iplDebut": 2008,
+        "innings": 226,
+        "runs": 2692,
+        "batting_strike_rate": 128.56,
+        "batting_average": 26.39,
+        "bowling_strike_rate": 23.34,
+        "bowling_average": 29.57,
+        "economy": 7.60,
+        "wickets": 152,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 10,
+        "playerName": "Rishabh Pant",
+        "dob": "04-08-1997",
+        "specialization": "Batsman",
+        "photo": "assets/players/playersPhoto/Rishabh.png",
+        "iplDebut": 2016,
+        "innings": 98,
+        "runs": 2838,
+        "batting_strike_rate": 147.97,
+        "batting_average": 34.61,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 11,
+        "playerName": "Axar Patel",
+        "dob": "20-01-1994",
+        "specialization": "all-rounder",
+        "photo": "assets/players/playersPhoto/Axar.png",
+        "iplDebut": 2014,
+        "innings": 136,
+        "runs": 3421,
+        "batting_strike_rate": 130.81,
+        "batting_average": 20.55,
+        "bowling_strike_rate": 25.31,
+        "bowling_average": 30.54,
+        "economy": 7.24,
+        "wickets": 112,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 12,
+        "playerName": "Pravin Dubey",
+        "dob": "01-07-1993",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Pravin.png",
+        "iplDebut": 2020,
+        "innings": 4,
+        "runs": 91,
+        "bowling_strike_rate": 66.00,
+        "bowling_average": 91.00,
+        "economy": 8.27,
+        "wickets": 1,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 13,
+        "playerName": "Ruturaj Gaikwad",
+        "dob": "31-01-1997",
+        "specialization": "Batter",
+        "photo": "assets/players/playersPhoto/Ruturaj.png",
+        "iplDebut": 2020,
+        "innings": 55,
+        "runs": 1859,
+        "batting_strike_rate": 134.81,
+        "batting_average": 37.94,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 14,
+        "playerName": "Devon Conway",
+        "dob": "08-07-1991",
+        "specialization": "Batter",
+        "photo": "assets/players/playersPhoto/Devon.png",
+        "iplDebut": 2022,
+        "innings": 23,
+        "runs": 924,
+        "batting_strike_rate": 141.28,
+        "batting_average": 48.63,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 15,
+        "playerName": "Sameer Rizvi",
+        "dob": "06-12-2003",
+        "specialization": "Batter",
+        "photo": "assets/players/playersPhoto/Sameer.png",
+        "iplDebut": 2024,
+        "innings": 7,
+        "runs": 924,
+        "batting_strike_rate": 102.86,
+        "batting_average": 9,
+        "economy": "",
+        "wickets": "",
+        "iplSeason": [
+            2023,
+            2024
+        ]
+    },
+    {
+        "playerId": 15,
+        "playerName": "Mitchell Santner",
+        "dob": "05-02-1992",
+        "specialization": "all-rounder",
+        "photo": "assets/players/playersPhoto/Mitchell.png",
+        "iplDebut": 2019,
+        "innings": 15,
+        "runs": 56,
+        "batting_strike_rate": 103.70,
+        "batting_average": 18.67,
+        "bowling_strike_rate": 24,
+        "bowling_average": 27.54,
+        "economy": 6.88,
+        "wickets": 13,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 16,
+        "playerName": "Shivam Dube",
+        "dob": "26-06-1993",
+        "specialization": "all-rounder",
+        "photo": "assets/players/playersPhoto/Shivam.png",
+        "iplDebut": 2019,
+        "innings": 61,
+        "runs": 1456,
+        "batting_strike_rate": 147.97,
+        "batting_average": 31.65,
+        "bowling_strike_rate": 22.40,
+        "bowling_average": 26,
+        "economy": 9.64,
+        "wickets": 5,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 17,
+        "playerName": "Nishant Sindhu",
+        "dob": "09-04-2004",
+        "specialization": "all-rounder",
+        "photo": "assets/players/playersPhoto/Nishant.png",
+        "iplDebut": 2019,
+        "innings": 0,
+        "runs": 0,
+        "batting_strike_rate": 0,
+        "batting_average": 0,
+        "bowling_strike_rate": 0,
+        "bowling_average": 0,
+        "economy": 0,
+        "wickets": 0,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 18,
+        "playerName": "Richard Gleeson",
+        "dob": "02-12-1987",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Richard.png",
+        "iplDebut": 2024,
+        "innings": 1,
+        "runs": 0,
+        "bowling_strike_rate": 23,
+        "bowling_average": 30,
+        "economy": 7.83,
+        "wickets": 1,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 19,
+        "playerName": "Richard Gleeson",
+        "dob": "02-12-1987",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Richard.png",
+        "iplDebut": 2024,
+        "innings": 1,
+        "runs": 0,
+        "bowling_strike_rate": 23,
+        "bowling_average": 30,
+        "economy": 7.83,
+        "wickets": 1,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 20,
+        "playerName": "Prashant Solanki",
+        "dob": "15-10-1992",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Prashant.png",
+        "iplDebut": 2022,
+        "innings": 2,
+        "runs": "",
+        "bowling_strike_rate": 18,
+        "bowling_average": 19,
+        "economy": 6.33,
+        "wickets": 2,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 21,
+        "playerName": "Tushar Deshpande",
+        "dob": "15-05-1995",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Tushar.png",
+        "iplDebut": 2022,
+        "innings": 2,
+        "runs": "",
+        "bowling_strike_rate": 18,
+        "bowling_average": 19,
+        "economy": 6.33,
+        "wickets": 2,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    },
+    {
+        "playerId": 21,
+        "playerName": "Simarjeet Singh",
+        "dob": "17-01-1998",
+        "specialization": "Bowler",
+        "photo": "assets/players/playersPhoto/Simarjeet.png",
+        "iplDebut": 2022,
+        "innings": 6,
+        "runs": "",
+        "bowling_strike_rate": 18,
+        "bowling_average": 19,
+        "economy": 6.33,
+        "wickets": 2,
+        "iplSeason": [
+            2023,
+            2024
+        ]
+
+    }
+]
