@@ -13,27 +13,27 @@ export const items = [
     isMenu: true,
     isPrivate: false,
   },
-  // {
-  //   key: "2",
-  //   label: "matches",
-  //   path: `/`,
-  //   isMenu: true,
-  //   isPrivate: false,
-  //   submenu: [
-  //     {
-  //       key: "upcoming",
-  //       label: "upcoming",
-  //       path: `/upcomingMatches`,
-  //       element: <CompletedMatchesPage />,
-  //     },
-  //     {
-  //       key: "completed",
-  //       label: "completed",
-  //       path: `/completedMatches`,
-  //       element: <UpcommingMatchesPage />,
-  //     },
-  //   ],
-  // },
+  {
+    key: "2",
+    label: "matches",
+    path: `/`,
+    isMenu: true,
+    isPrivate: true,
+    submenu: [
+      {
+        key: "upcoming",
+        label: "upcoming",
+        path: `/matches/upcomingMatches`,
+        element: <UpcommingMatchesPage />,
+      },
+      {
+        key: "completed",
+        label: "completed",
+        path: `/matches/completedMatches`,
+        element: <CompletedMatchesPage />,
+      },
+    ],
+  },
   {
     key: "3",
     label: "teams",

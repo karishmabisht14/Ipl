@@ -1,12 +1,10 @@
-import { changeLanguage } from "../../utils/internationalisation";
-import { languages } from "../../utils/internationalisation";
-import { Select } from 'antd';
-const { Option } = Select
-
+import { changeLanguage, languages } from "../../utils/internationalisation";
+import { Select } from "antd";
+const { Option } = Select;
 
 const LanguageSelector = () => {
   const onChange = (value) => {
-    changeLanguage(value)
+    changeLanguage(value);
   };
 
   return (
@@ -22,8 +20,6 @@ const LanguageSelector = () => {
             <Option key={lng.code} onChange={() => changeLanguage(lng.code)}>
               {lng.lang}
             </Option>
-
-
           );
         })}
       </Select>

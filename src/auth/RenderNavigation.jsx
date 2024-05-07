@@ -3,7 +3,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 // import { navList } from "./Navigation";
 import { AuthData } from "./AuthWrapper";
 import { items } from "../components/header/navbar/Navigation";
-import { Login } from "../login/Login";
+import Login from "../login/Login";
 
 export const isAuthorisedRoute = (user, r, isMenu) => {
   let allowed = false;
@@ -30,7 +30,12 @@ export const RenderRoutes = () => {
     <Routes>
       {items.map((r, i) => {
         if (isAuthorisedRoute(user, r))
-          return <Route key={i} path={r.path} element={r.element} />;
+          if (r.submenu) {
+            return r.submenu.map((menu) => {
+              return <Route key={i} path={menu.path} element={menu.element} />;
+            });
+          }
+        return <Route key={i} path={r.path} element={r.element} />;
       })}
 
       {!user.isAuthenticated && <Route path="/login" element={<Login />} />}

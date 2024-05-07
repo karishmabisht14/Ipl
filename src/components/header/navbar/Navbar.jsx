@@ -11,36 +11,35 @@ import { AuthData } from "../../../auth/AuthWrapper";
 import { isAuthorisedRoute } from "../../../auth/RenderNavigation";
 import LanguageSelector from "../../../pages/home/LanguageSelector";
 import { TranslateFunction } from "../../../utils/internationalisation";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const { Header } = Layout;
 
 const Navbar = () => {
   const { user, logout } = AuthData();
-  const nav = useNavigate();
-
-  // console.log('location from state', user)
 
   const list = items.map((r, i) => {
+    console.log("rrrr", r);
     if (isAuthorisedRoute(user, r, true))
-      return { key: r.path, label: r.label };
+      return r.submenu
+        ? { key: r.path, label: r.label, submenu: r.submenu }
+        : { key: r.path, label: r.label };
   });
   console.log("llllllllll", list);
   const labels = TranslateFunction("labels");
 
-  // const navigateUrl = (e) => {
-  //   console.log("click ", e);
-  //   nav(e.key);
-  //   //setCurrent(e.key);
-  // };
-
   const subMenu = (submenu) => (
     <Menu style={{ backgroundColor: "#19398a" }}>
-      {submenu.map((item) => (
-        <Menu.Item key={item.key} style={{ color: "white" }}>
-          <Link to={item.path}>matches</Link>
-        </Menu.Item>
-      ))}
+      {submenu.map(
+        (item) => (
+          console.log("itemm", item),
+          (
+            <Menu.Item key={item.key} style={{ color: "white" }}>
+              <Link to={item.path}>{labels(item.label)}</Link>
+            </Menu.Item>
+          )
+        )
+      )}
     </Menu>
   );
 
@@ -155,39 +154,45 @@ const Navbar = () => {
             transition: "none",
           }}
         >
-          {list.map((item) => (
-            <React.Fragment key={item.key}>
-              {item.label === "matches" ? (
-                <Dropdown overlay={subMenu(item.submenu)} key={item.key}>
-                  <Link
-                    to={item.key}
-                    className="ant-dropdown-link"
-                    // onClick={navigateUrl}
-                    style={{
-                      marginTop: "1px",
-                      margin: "0 20px",
-                      color: "white",
-                    }}
-                  >
-                    {labels(item.label)}
-                  </Link>
-                </Dropdown>
-              ) : (
-                <Link to={item.key}>
-                  <Menu.Item
-                    key={item.key}
-                    style={{
-                      margin: "0px 20px",
-                      color: "white",
-                      backgroundColor: "transparent",
-                    }}
-                  >
-                    {labels(item.label)}
-                  </Menu.Item>
-                </Link>
-              )}
-            </React.Fragment>
-          ))}
+          {list.map(
+            (item) =>
+              item && (
+                <React.Fragment key={item.key}>
+                  {item.label === "matches" ? (
+                    (console.log("okkkkkk"),
+                    (
+                      <Dropdown overlay={subMenu(item.submenu)} key={item.key}>
+                        <Link
+                          to={item.key}
+                          className="ant-dropdown-link"
+                          // onClick={navigateUrl}
+                          style={{
+                            marginTop: "1px",
+                            margin: "0 20px",
+                            color: "white",
+                          }}
+                        >
+                          {labels(item.label)}
+                        </Link>
+                      </Dropdown>
+                    ))
+                  ) : (
+                    <Link to={item.key}>
+                      <Menu.Item
+                        key={item.key}
+                        style={{
+                          margin: "0px 20px",
+                          color: "white",
+                          backgroundColor: "transparent",
+                        }}
+                      >
+                        {labels(item.label)}
+                      </Menu.Item>
+                    </Link>
+                  )}
+                </React.Fragment>
+              )
+          )}
 
           <div
             style={{

@@ -2,6 +2,7 @@ import MatchDetail from "./MatchDetail";
 import { Col, Row, Divider, Button, Tooltip } from "antd";
 import MatchResult from "./MatchResult";
 import { useState } from "react";
+import PermissionButton from "../../../auth/PermissionButton";
 import { EditOutlined, DeleteOutlined, CheckOutlined } from "@ant-design/icons";
 
 const Match = ({
@@ -34,18 +35,20 @@ const Match = ({
                   title="Edit"
                   color="rgb(239, 65, 35)"
                 >
-                  <Button
-                    className="editBtn"
-                    onClick={() => initCreateUpdate(match.match_id)}
-                    style={{
-                      backgroundColor: "rgb(229, 231, 233)",
-                      borderColor: "rgb(229, 231, 233)",
-                      borderRadius: "50%",
-                      marginRight: "5px",
-                    }}
-                  >
-                    <EditOutlined />
-                  </Button>
+                  <PermissionButton allowedPermissions={["addMatch"]}>
+                    <Button
+                      className="editBtn"
+                      onClick={() => initCreateUpdate(match.match_id)}
+                      style={{
+                        backgroundColor: "rgb(229, 231, 233)",
+                        borderColor: "rgb(229, 231, 233)",
+                        borderRadius: "50%",
+                        marginRight: "5px",
+                      }}
+                    >
+                      <EditOutlined />
+                    </Button>
+                  </PermissionButton>
                 </Tooltip>
                 <Tooltip
                   placement="bottom"
@@ -53,18 +56,20 @@ const Match = ({
                   color="rgb(239, 65, 35)"
                 >
                   {" "}
-                  <Button
-                    className="deleteBtn"
-                    onClick={() => handleDelete(match.match_id)}
-                    style={{
-                      backgroundColor: "rgb(229, 231, 233)",
-                      borderColor: "rgb(229, 231, 233)",
-                      borderRadius: "50%",
-                      marginRight: "4px",
-                    }}
-                  >
-                    <DeleteOutlined />
-                  </Button>
+                  <PermissionButton allowedPermissions={["addMatch"]}>
+                    <Button
+                      className="deleteBtn"
+                      onClick={() => handleDelete(match.match_id)}
+                      style={{
+                        backgroundColor: "rgb(229, 231, 233)",
+                        borderColor: "rgb(229, 231, 233)",
+                        borderRadius: "50%",
+                        marginRight: "4px",
+                      }}
+                    >
+                      <DeleteOutlined />
+                    </Button>
+                  </PermissionButton>
                 </Tooltip>
                 <Tooltip
                   placement="bottom"

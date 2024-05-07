@@ -6,7 +6,7 @@ import { getMatches, removeMatch } from "../../../services/matches/matches";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
 import { Col, Row, Modal, Typography } from "antd";
 import moment from "moment";
-
+import PermissionButton from "../../../auth/PermissionButton";
 const Text = Typography;
 
 function formatDates(dates) {
@@ -134,23 +134,25 @@ const MatchesList = ({
             justifyContent: "end",
           }}
         >
-          <Button
-            className="add-matches"
-            style={{
-              transform: "skew(-20deg)",
-              backgroundColor: "rgb(239, 65, 35)",
-              padding: "0px 20px",
-              fontSize: "14px",
-              fontWeight: "700",
-              color: "#fff",
-              margin: "0px 14px 0px",
-              borderRadius: "3px",
-              border: "1px solid transparent",
-            }}
-            onClick={() => initCreateUpdate()}
-          >
-            ADD MATCHES
-          </Button>
+          <PermissionButton allowedPermissions={["addMatch"]}>
+            <Button
+              className="add-matches"
+              style={{
+                transform: "skew(-20deg)",
+                backgroundColor: "rgb(239, 65, 35)",
+                padding: "0px 20px",
+                fontSize: "14px",
+                fontWeight: "700",
+                color: "#fff",
+                margin: "0px 14px 0px",
+                borderRadius: "3px",
+                border: "1px solid transparent",
+              }}
+              onClick={() => initCreateUpdate()}
+            >
+              ADD MATCHES
+            </Button>
+          </PermissionButton>
         </Col>
       </Row>
       <Row>

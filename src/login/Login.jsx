@@ -4,7 +4,7 @@ import { Button, Typography } from "antd";
 import { AuthData } from "../auth/AuthWrapper";
 const { Text } = Typography;
 
-export const Login = () => {
+const Login = () => {
   console.log("loggg");
   const navigate = useNavigate();
   const location = useLocation();
@@ -53,3 +53,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;
