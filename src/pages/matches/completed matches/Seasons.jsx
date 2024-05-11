@@ -1,6 +1,8 @@
 import { Button, Dropdown, Space, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import { TranslateFunction } from "../../../utils/internationalisation";
 const Seasons = ({ searchObj, setSearchObj }) => {
+  const labels = TranslateFunction("labels");
   const items = [
     {
       label: "2024",
@@ -43,7 +45,7 @@ const Seasons = ({ searchObj, setSearchObj }) => {
         }}
       >
         <Space>
-          Seasons <DownOutlined />
+          {labels("Seasons")} <DownOutlined />
         </Space>
       </Button>
     </Dropdown>

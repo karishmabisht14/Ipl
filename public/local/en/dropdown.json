@@ -1,0 +1,54 @@
+{
+  "teams": [
+    {
+      "value": "Chennai Super Kings",
+      "img": "/assets/matches/teamsLogo/CSK.png",
+      "label": "CSK"
+    },
+    {
+      "value": "Gujarat Titans",
+      "img": "/assets/matches/teamsLogo/GT.png",
+      "label": "GT"
+    },
+    {
+      "value": "Mumbai Indians",
+      "img": "/assets/matches/teamsLogo/MI.png",
+      "label": "MI"
+    },
+    {
+      "value": "Lucknow Super Giants",
+      "img": "/assets/matches/teamsLogo/LSG.png",
+      "label": "LSG"
+    },
+    {
+      "value": "Royal Challengers Bangalores",
+      "img": "/assets/matches/teamsLogo/RCB.png",
+      "label": "RCB"
+    },
+    {
+      "value": "Punjab Kings",
+      "img": "/assets/matches/teamsLogo/PBKS.png",
+      "label": "PBKS"
+    },
+    {
+      "value": "Delhi Capitals",
+      "img": "/assets/matches/teamsLogo/DC.png",
+      "label": "DC"
+    },
+    {
+      "value": "Kolkata Knight Riders",
+      "img": "/assets/matches/teamsLogo/KKR.png",
+      "label": "KKR"
+    },
+    {
+      "value": "Sunrise Hyderabad",
+      "img": "/assets/matches/teamsLogo/SRH.png",
+      "label": "SRH"
+    },
+    {
+      "value": "Rajasthan Royals",
+      "img": "/assets/matches/teamsLogo/RR.png",
+      "label": "RR"
+    }
+  ]
+}

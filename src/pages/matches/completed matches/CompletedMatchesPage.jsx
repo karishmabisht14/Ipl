@@ -32,7 +32,7 @@ const CompletedMatchesPage = () => {
           <Filters searchObj={searchObj} setSearchObj={setSearchObj} />
         </Col>
         <Col span={18}>
-          <Card style={{ marginBottom: "25px" }}>
+          <Card style={{ marginBottom: "25px", padding: "24px" }}>
             <MatchesList searchObj={searchObj} />
           </Card>
         </Col>

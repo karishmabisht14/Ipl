@@ -1,8 +1,10 @@
 import { Modal, Button, Table, Typography } from "antd";
+import { TranslateFunction } from "../../../utils/internationalisation";
 
 const { Text } = Typography;
 
 const MatchResult = ({ match, isResultModalOpen, setIsResultModalOpen }) => {
+  const labels = TranslateFunction("labels");
   const data = [
     {
       key: 1,
@@ -59,7 +61,7 @@ const MatchResult = ({ match, isResultModalOpen, setIsResultModalOpen }) => {
           border: "1px solid transparent",
         }}
       >
-        Match Result
+        {labels("Match Result")}
       </Button>
       <Modal
         title="Match Result Table"

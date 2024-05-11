@@ -8,6 +8,7 @@ import {
   Select,
 } from "antd";
 import { addMatch, updateMatch } from "../../../services/matches/matches";
+import { TranslateFunction } from "../../../utils/internationalisation";
 
 const { Option } = Select;
 const CreateUpdateMatchForm = ({
@@ -18,6 +19,8 @@ const CreateUpdateMatchForm = ({
   matchesUpdatedCount,
   setMatchesUpdatedCount,
 }) => {
+  const labels = TranslateFunction("labels");
+
   const submitForm = (values) => {
     const fieldsValue = {
       ...values,
@@ -47,7 +50,7 @@ const CreateUpdateMatchForm = ({
   return (
     <>
       <Modal
-        title="Match Form"
+        title={labels("Match Form")}
         open={isFormModalOpen}
         onCancel={() => setIsFormModalOpen(false)}
         footer={null}
@@ -68,7 +71,7 @@ const CreateUpdateMatchForm = ({
           autoComplete="off"
         >
           <Form.Item
-            label="Match No"
+            label={labels("Match No")}
             name="match_no"
             rules={[
               {
@@ -80,7 +83,7 @@ const CreateUpdateMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Date"
+            label={labels("Date")}
             name="date"
             rules={[
               {
@@ -92,7 +95,7 @@ const CreateUpdateMatchForm = ({
             <DatePicker />
           </Form.Item>
           <Form.Item
-            label="Time"
+            label={labels("Time")}
             name="time"
             rules={[
               {
@@ -104,7 +107,7 @@ const CreateUpdateMatchForm = ({
             <TimePicker />
           </Form.Item>
           <Form.Item
-            name="venue"
+            name={labels("venue")}
             label="Venue"
             rules={[
               {
@@ -113,7 +116,7 @@ const CreateUpdateMatchForm = ({
               },
             ]}
           >
-            <Select placeholder="select your Venue">
+            <Select placeholder={labels("select your Venue")}>
               <Option value="Narendra Modi Stadium, Ahmedabad">
                 Narendra Modi Stadium, Ahmedabad
               </Option>
@@ -136,7 +139,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
 
           <Form.Item
-            label="Team A logo"
+            label={labels("Team A logo")}
             name="team_A_logo"
             rules={[
               {
@@ -149,7 +152,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
           <Form.Item
             name="team_A"
-            label="First Team"
+            label={labels("First Team")}
             rules={[
               {
                 required: true,
@@ -157,7 +160,7 @@ const CreateUpdateMatchForm = ({
               },
             ]}
           >
-            <Select placeholder="select your first team">
+            <Select placeholder={labels("select your first team")}>
               <Option value="Chennai Super Kings">CSK</Option>
               <Option value="Gujarat Titans">GT</Option>
               <Option value="Mumbai Indians">MI</Option>
@@ -172,7 +175,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
 
           <Form.Item
-            label="Team B Logo"
+            label={labels("Team B Logo")}
             name="team_B_logo"
             rules={[
               {
@@ -185,7 +188,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
           <Form.Item
             name="team_B"
-            label="Second Team"
+            label={labels("Second Team")}
             rules={[
               {
                 required: true,
@@ -193,7 +196,7 @@ const CreateUpdateMatchForm = ({
               },
             ]}
           >
-            <Select placeholder="select your second team">
+            <Select placeholder={labels("select your second team")}>
               <Option value="Chennai Super Kings">CSK</Option>
               <Option value="Gujarat Titans">GT</Option>
               <Option value="Mumbai Indians">MI</Option>
@@ -213,8 +216,8 @@ const CreateUpdateMatchForm = ({
             </Button>
             <Button type="primary" htmlType="submit">
               {payload.current.operation === "ADD"
-                ? "Add Match"
-                : "Update Match"}
+                ? labels("Add Match")
+                : labels("Update Match")}
             </Button>
           </Form.Item>
         </Form>

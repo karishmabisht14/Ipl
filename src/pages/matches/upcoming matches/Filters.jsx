@@ -1,19 +1,13 @@
 import "../../../index.css";
 import { Col, Row, Typography, DatePicker, Image, Select } from "antd";
-import CSK from "../../../image/matches/teamsLogo/CSK.png";
-import DC from "../../../image/matches/teamsLogo/DC.png";
-import GT from "../../../image/matches/teamsLogo/GT.png";
-import KKR from "../../../image/matches/teamsLogo/KKR.png";
-import LSG from "../../../image/matches/teamsLogo/LSG.png";
-import MI from "../../../image/matches/teamsLogo/MI.png";
-import PBKS from "../../../image/matches/teamsLogo/PBKS.png";
-import RCB from "../../../image/matches/teamsLogo/RCB.png";
-import RR from "../../../image/matches/teamsLogo/RR.png";
-import SRH from "../../../image/matches/teamsLogo/SRH.png";
+import { TranslateFunction } from "../../../utils/internationalisation";
 
 const { Text } = Typography;
 
 const Filters = ({ searchObj, setSearchObj }) => {
+  const dropdown = TranslateFunction("dropdown");
+  const labels = TranslateFunction("labels");
+
   const venues = [
     "Narendra Modi Stadium, Ahmedabad",
     "MA Chidambaram Stadium, Chennai",
@@ -23,22 +17,7 @@ const Filters = ({ searchObj, setSearchObj }) => {
     "Sawai Mansingh Stadium, Jaipur",
   ];
 
-  const teams = [
-    {
-      value: "Chennai Super Kings",
-      img: CSK,
-      label: "CSK",
-    },
-    { value: "Gujarat Titans", img: GT, label: "GT" },
-    { value: "Mumbai Indians", img: MI, label: "MI" },
-    { value: "Lucknow Super Giants", img: LSG, label: "LSG" },
-    { value: "Royal Challengers Bangalores", img: RCB, label: "RCB" },
-    { value: "Punjab Kings", img: PBKS, label: "PBKS" },
-    { value: "Delhi Capitals", img: DC, label: "DC" },
-    { value: "Kolkata Knight Riders", img: KKR, label: "KKR" },
-    { value: "Sunrise Hyderabad", img: SRH, label: "SRH" },
-    { value: "Rajasthan Royals", img: RR, label: "RR" },
-  ];
+  const teams = dropdown("teams");
 
   return (
     <>
@@ -50,12 +29,12 @@ const Filters = ({ searchObj, setSearchObj }) => {
               fontWeight: "bold",
             }}
           >
-            Venue
+            {labels("Venue")}
           </Text>
           <Select
             mode="multiple"
             allowClear
-            placeholder="Select Venue"
+            placeholder={labels("Select Venue")}
             value={searchObj.venue}
             onChange={(venue) => {
               setSearchObj({ ...searchObj, venue });
@@ -70,11 +49,13 @@ const Filters = ({ searchObj, setSearchObj }) => {
       </Row>
       <Row style={{ marginBottom: 40 }}>
         <Col span={18}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>Teams</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            {labels("Teams")}
+          </Text>
           <Select
             mode="multiple"
             allowClear
-            placeholder="Select Teams"
+            placeholder={labels("Select Teams")}
             value={searchObj.team}
             onChange={(team) => {
               setSearchObj({ ...searchObj, team });
@@ -94,10 +75,12 @@ const Filters = ({ searchObj, setSearchObj }) => {
       </Row>
       <Row style={{ marginBottom: 40 }}>
         <Col span={18}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>Date</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            {labels("Date")}
+          </Text>
           <DatePicker
             multiple
-            placeholder="Select Dates"
+            placeholder={labels("Select Dates")}
             onChange={(date, dateString) => {
               setSearchObj({ ...searchObj, date: dateString });
             }}

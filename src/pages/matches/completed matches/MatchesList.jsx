@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Match from "../matches list/Match";
 import { getMatches } from "../../../services/matches/matches";
 import { Col, Row, Typography } from "antd";
+import { TranslateFunction } from "../../../utils/internationalisation";
 
 const Text = Typography;
 const MatchesList = ({ searchObj }) => {

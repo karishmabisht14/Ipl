@@ -7,7 +7,7 @@ import HomePage from "../../../pages/home/HomePage";
 export const items = [
   {
     key: "1",
-    label: "home",
+    label: "Home",
     path: `/`,
     element: <HomePage />,
     isMenu: true,
@@ -15,20 +15,20 @@ export const items = [
   },
   {
     key: "2",
-    label: "matches",
+    label: "Matches",
     path: `/`,
     isMenu: true,
-    isPrivate: true,
+    isPrivate: false,
     submenu: [
       {
         key: "upcoming",
-        label: "upcoming",
+        label: "Upcoming Matches",
         path: `/matches/upcomingMatches`,
         element: <UpcommingMatchesPage />,
       },
       {
         key: "completed",
-        label: "completed",
+        label: "Completed Matches",
         path: `/matches/completedMatches`,
         element: <CompletedMatchesPage />,
       },
@@ -36,7 +36,7 @@ export const items = [
   },
   {
     key: "3",
-    label: "teams",
+    label: "Teams",
     path: `/teams`,
     element: <TeamsWrapper />,
     isMenu: true,
@@ -44,7 +44,7 @@ export const items = [
   },
   {
     key: "4",
-    label: "players",
+    label: "Players",
     path: `/players`,
     element: <PlayersWrapper />,
     isMenu: true,

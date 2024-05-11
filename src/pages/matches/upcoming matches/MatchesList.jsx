@@ -7,6 +7,7 @@ import { ExclamationCircleOutlined } from "@ant-design/icons";
 import { Col, Row, Modal, Typography } from "antd";
 import moment from "moment";
 import PermissionButton from "../../../auth/PermissionButton";
+import { TranslateFunction } from "../../../utils/internationalisation";
 const Text = Typography;
 
 function formatDates(dates) {
@@ -57,6 +58,8 @@ const MatchesList = ({
 }) => {
   const [matchesList, setMatchesList] = useState(null);
   const [filteredMatchesList, setfilteredMatchesList] = useState(null);
+
+  const labels = TranslateFunction("labels");
 
   useEffect(() => {
     getMatches().then((matches) => {
@@ -150,7 +153,7 @@ const MatchesList = ({
               }}
               onClick={() => initCreateUpdate()}
             >
-              ADD MATCHES
+              {labels("ADD MATCHES")}
             </Button>
           </PermissionButton>
         </Col>

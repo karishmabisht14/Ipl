@@ -17,8 +17,15 @@ export const TranslateFunction = (filename) => {
   return t;
 };
 
-i18n.use(LanguageDetector).use(initReactI18next).use(Backend).init({
-  debug: true,
-  fallbackLng: "en",
-  returnObjects: true,
-});
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .use(Backend)
+  .init({
+    debug: true,
+    fallbackLng: "en",
+    returnObjects: true,
+    backend: {
+      loadPath: "local/{{lng}}/{{ns}}.json", //"http://localhost:3000/local/{{lng}}/{{ns}}.json"
+    },
+  });

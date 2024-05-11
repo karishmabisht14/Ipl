@@ -1,29 +1,55 @@
 import { changeLanguage, languages } from "../../utils/internationalisation";
-import { Select } from "antd";
-const { Option } = Select;
+import { Space } from "antd";
+import { GlobalOutlined, DownOutlined } from "@ant-design/icons";
+import { Menu, Dropdown, Button } from "antd";
 
 const LanguageSelector = () => {
-  const onChange = (value) => {
-    changeLanguage(value);
+  const handleMenuClick = (e) => {
+    changeLanguage(e.key);
   };
 
+  const languageMenu = (
+    <Menu
+      style={{
+        // width: 100,
+        background: "rgb(6, 30, 89)",
+      }}
+      onClick={handleMenuClick}
+    >
+      {languages.map((lng) => (
+        <Menu.Item
+          key={lng.code}
+          style={{
+            background: "rgb(6, 30, 89)",
+            color: "white",
+            opacity: "0.4",
+          }}
+        >
+          {lng.lang}
+        </Menu.Item>
+      ))}
+    </Menu>
+  );
+
   return (
-    <>
-      <Select
-        showSearch
-        placeholder="Select the language"
-        optionFilterProp="children"
-        onChange={onChange}
+    <Dropdown overlay={languageMenu} placement="bottomRight">
+      <Button
+        style={{
+          background: "none",
+          border: "none",
+          color: "white",
+          paddingTop: 11,
+          opacity: 0.4,
+          fontWeight: "bold",
+        }}
       >
-        {languages.map((lng) => {
-          return (
-            <Option key={lng.code} onChange={() => changeLanguage(lng.code)}>
-              {lng.lang}
-            </Option>
-          );
-        })}
-      </Select>
-    </>
+        <Space>
+          <GlobalOutlined />
+          Language
+          <DownOutlined />
+        </Space>
+      </Button>
+    </Dropdown>
   );
 };
 

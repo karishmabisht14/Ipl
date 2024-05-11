@@ -23,13 +23,13 @@
   font-family: bebas_neueregular;
 }
 
-.what-r-u-text, .what-r-u-text-2 {
+.what-r-u-text,
+.what-r-u-text-2 {
   font-style: italic;
   font-weight: 600;
   font-size: 28px;
   color: #1d1d1d;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -53,16 +53,18 @@
   to {
     transform: rotate(360deg);
   }
-  
 }
 
+.ant-layout-header {
+  padding: 0 !important;
+}
 .image-container {
   position: relative;
   display: inline-block;
 }
 
 .image-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -76,8 +78,6 @@
   width: 100%;
   height: auto;
 }
-
-
 
 .button-86 {
   all: unset;
@@ -102,12 +102,12 @@
 
 .button-86::after,
 .button-86::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: -99999;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .button-86::before {
@@ -149,4 +149,3 @@
 .ant-card-body {
   padding: 0 !important;
 }
-
