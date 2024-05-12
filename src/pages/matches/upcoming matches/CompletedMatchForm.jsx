@@ -1,5 +1,7 @@
 import { Modal, Form, Input, Button } from "antd";
-import { addMatch, removeMatch } from "../../../services/matches/matches";
+import { updateMatch } from "../../../services/matches/matches";
+import { useNavigate } from "react-router-dom";
+import { TranslateFunction } from "../../../utils/internationalisation";
 
 const CompletedMatchForm = ({
   form,
@@ -9,29 +11,31 @@ const CompletedMatchForm = ({
   matchesUpdatedCount,
   setMatchesUpdatedCount,
 }) => {
+  const labels = TranslateFunction("labels");
+  const navigate = useNavigate();
   const submitForm = (values) => {
-    // console.log("values", values);
+    const fieldValues = {
+      ...values,
+      team_A_overs: +values["team_A_overs"],
+      team_B_overs: +values["team_B_overs"],
+    };
 
-    payload.current.data = { ...payload.current.data, ...values };
-    const match_id = payload.current.data.match_id;
-    removeMatch(match_id, "match_id").then((matches) => {
-      //console.log("remove Matches", matches);
-      setMatchesUpdatedCount(matchesUpdatedCount + 1);
-    });
+    payload.current.data = { ...payload.current.data, ...fieldValues };
     payload.current.data.status = "completed";
     payload.current.data.result = "declared";
 
-    addMatch(payload.current.data).then((matches) => {
-      //console.log("add Matches", matches);
+    updateMatch(payload.current.data, "match_id").then((matches) => {
+      console.log("completedMatchForm", matches);
       setCompletedModalOpen(false);
       setMatchesUpdatedCount(matchesUpdatedCount + 1);
+      navigate("/matches/completedMatches", { state: matchesUpdatedCount });
     });
   };
 
   return (
     <>
       <Modal
-        title="Match Form"
+        title={labels("Completed Match Form")}
         open={completedModalOpen}
         onCancel={() => setCompletedModalOpen(false)}
         footer={null}
@@ -52,7 +56,7 @@ const CompletedMatchForm = ({
           autoComplete="off"
         >
           <Form.Item
-            label="Team A Overs"
+            label={labels("Team A Overs")}
             name="team_A_overs"
             rules={[
               {
@@ -64,7 +68,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Team B Overs"
+            label={labels("Team B Overs")}
             name="team_B_overs"
             rules={[
               {
@@ -76,7 +80,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Team A Wickets"
+            label={labels("Team A Wickets")}
             name="team_A_wickets"
             rules={[
               {
@@ -88,7 +92,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Team B Wickets"
+            label={labels("Team B Wickets")}
             name="team_B_wickets"
             rules={[
               {
@@ -100,7 +104,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Team A Score"
+            label={labels("Team A Score")}
             name="team_A_score"
             rules={[
               {
@@ -112,7 +116,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Team B Score"
+            label={labels("Team B Score")}
             name="team_B_score"
             rules={[
               {
@@ -124,7 +128,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Winner"
+            label={labels("Winner")}
             name="winner_id"
             rules={[
               {
@@ -136,7 +140,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Player of the match"
+            label={labels("Player of the match")}
             name="player_of_the_match"
             rules={[
               {
@@ -148,7 +152,7 @@ const CompletedMatchForm = ({
             <Input />
           </Form.Item>
           <Form.Item
-            label="Match Conclusion"
+            label={labels("Match Conclusion")}
             name="match_conclusion"
             rules={[
               {
@@ -161,12 +165,12 @@ const CompletedMatchForm = ({
           </Form.Item>
           <Form.Item>
             <Button type="primary" onClick={() => setCompletedModalOpen(false)}>
-              Cancel
+              {labels("Cancel")}
             </Button>
             <Button type="primary" htmlType="submit">
               {payload.current.operation === "ADD"
-                ? "Add Match"
-                : "Update Match"}
+                ? labels("Add Match")
+                : labels("Update Match")}
             </Button>
           </Form.Item>
         </Form>

@@ -78,3 +78,11 @@ code {
   text-align: center !important;
   background-color: rgb(239, 65, 35) !important;
 }
+
+.form {
+  display: block;
+  width: 500px;
+  padding: 20px;
+  height: 500px;
+  margin: auto;
+}

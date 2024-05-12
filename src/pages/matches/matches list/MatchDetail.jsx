@@ -196,7 +196,7 @@ const MatchDetail = ({ match }) => {
                   fontWeight: "500",
                 }}
               >
-                {`MATCH ${match.match_no.toUpperCase()}`}
+                {match.match_no.toUpperCase()}
               </Text>
             </Col>
             <Col span={17}>

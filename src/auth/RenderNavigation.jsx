@@ -1,6 +1,4 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-
-// import { navList } from "./Navigation";
 import { AuthData } from "./AuthWrapper";
 import { items } from "../components/header/navbar/Navigation";
 import Login from "../login/Login";
@@ -35,6 +33,7 @@ export const RenderRoutes = () => {
               return <Route key={i} path={menu.path} element={menu.element} />;
             });
           }
+        console.log("authorize");
         return <Route key={i} path={r.path} element={r.element} />;
       })}
 

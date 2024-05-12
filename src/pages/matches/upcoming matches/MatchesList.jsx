@@ -11,7 +11,7 @@ import { TranslateFunction } from "../../../utils/internationalisation";
 const Text = Typography;
 
 function formatDates(dates) {
-  let formatedDates = dates.map((d) => moment(d).format("MMM, ddd DD YYYY"));
+  let formatedDates = dates.map((d) => moment(d).format("MMM, ddd DD"));
   return formatedDates;
 }
 
@@ -153,7 +153,7 @@ const MatchesList = ({
               }}
               onClick={() => initCreateUpdate()}
             >
-              {labels("ADD MATCHES")}
+              {labels("Add Match")}
             </Button>
           </PermissionButton>
         </Col>

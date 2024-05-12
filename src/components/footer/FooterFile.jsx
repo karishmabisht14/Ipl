@@ -51,7 +51,7 @@ const FooterFile = () => {
             <Image
               preview={false}
               width={130}
-              src="assets\home\tataLogo.svg"
+              src="\assets\home\tataLogo.svg"
               style={{ marginLeft: "50px" }}
             />
           </a>
@@ -68,7 +68,7 @@ const FooterFile = () => {
             <Image
               preview={false}
               width={130}
-              src="assets\home\11Circle.svg"
+              src="\assets\home\11Circle.svg"
               style={{ marginLeft: "20px" }}
             />
           </a>
@@ -81,7 +81,7 @@ const FooterFile = () => {
               preview={false}
               style={{ marginLeft: "60px" }}
               width={130}
-              src="assets\home\angelone.svg"
+              src="\assets\home\angelone.svg"
             />
           </a>
           <a
@@ -93,7 +93,7 @@ const FooterFile = () => {
               style={{ marginLeft: "90px" }}
               preview={false}
               width={100}
-              src="assets\home\rupayLogo.svg"
+              src="\assets\home\rupayLogo.svg"
             />
           </a>
         </Col>
@@ -110,7 +110,7 @@ const FooterFile = () => {
               preview={false}
               width={130}
               style={{ marginLeft: "80px" }}
-              src="assets\home\jioCinema.svg"
+              src="\assets\home\jioCinema.svg"
             />
           </a>
         </Col>

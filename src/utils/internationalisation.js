@@ -22,10 +22,10 @@ i18n
   .use(initReactI18next)
   .use(Backend)
   .init({
-    debug: true,
+    debug: false,
     fallbackLng: "en",
     returnObjects: true,
     backend: {
-      loadPath: "local/{{lng}}/{{ns}}.json", //"http://localhost:3000/local/{{lng}}/{{ns}}.json"
+      loadPath: "/local/{{lng}}/{{ns}}.json", //"http://localhost:3000/local/{{lng}}/{{ns}}.json"
     },
   });

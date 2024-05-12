@@ -60,7 +60,7 @@ const Navbar = () => {
           <Image
             preview={false}
             style={{ width: 40, paddingRight: 10 }}
-            src="assets\home\BCCI_logo.png"
+            src="\assets\home\BCCI_logo.png"
           />
           BCCI.TV
         </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
           href="https://www.wplt20.com/?_gl=1*1a9oyce*_ga*MTQwOTMyMTAzNy4xNzEwMzIwOTc1*_ga_VHLTEJRMR0*MTcxMjgyNDAzMS4zNC4xLjE3MTI4MzM1OTAuNTAuMC4w"
           style={{ lineHeight: 2.3, paddingLeft: 40 }}
         >
-          <Image preview={false} src="assets\home\wpl_logo.svg" />
+          <Image preview={false} src="\assets\home\wpl_logo.svg" />
         </a>
         <div
           style={{
@@ -156,7 +156,7 @@ const Navbar = () => {
               preview={false}
               style={{ width: 95, marginLeft: 145 }}
               width={200}
-              src="assets\home\logo.png"
+              src="\assets\home\logo.png"
             />
           </Link>
         </div>

@@ -107,8 +107,8 @@ const CreateUpdateMatchForm = ({
             <TimePicker />
           </Form.Item>
           <Form.Item
-            name={labels("venue")}
-            label="Venue"
+            name="Venue"
+            label={labels("Venue")}
             rules={[
               {
                 required: true,
@@ -139,7 +139,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
 
           <Form.Item
-            label={labels("Team A logo")}
+            label={labels("First Team Logo")}
             name="team_A_logo"
             rules={[
               {
@@ -175,7 +175,7 @@ const CreateUpdateMatchForm = ({
           </Form.Item>
 
           <Form.Item
-            label={labels("Team B Logo")}
+            label={labels("Second Team Logo")}
             name="team_B_logo"
             rules={[
               {
@@ -212,7 +212,7 @@ const CreateUpdateMatchForm = ({
 
           <Form.Item>
             <Button type="primary" onClick={() => setIsFormModalOpen(false)}>
-              Cancel
+              {labels("Cancel")}
             </Button>
             <Button type="primary" htmlType="submit">
               {payload.current.operation === "ADD"

@@ -6,6 +6,7 @@
       "addMatch",
       "editMatch",
       "deleteMatch",
+      "completeMatch",
       "addTeam",
       "editTeam",
       "deleteTeam",
@@ -34,6 +35,6 @@
   {
     "userName": "Anisha",
     "password": "anisha",
-    "permissions": []
+    "permissions": ["completeMatch"]
   }
 ]

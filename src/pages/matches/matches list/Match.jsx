@@ -77,17 +77,19 @@ const Match = ({
                   color="rgb(239, 65, 35)"
                 >
                   {" "}
-                  <Button
-                    className="deleteBtn"
-                    onClick={() => initCompleteMatch(match.match_id)}
-                    style={{
-                      backgroundColor: "rgb(229, 231, 233)",
-                      borderColor: "rgb(229, 231, 233)",
-                      borderRadius: "50%",
-                    }}
-                  >
-                    <CheckOutlined />
-                  </Button>
+                  <PermissionButton allowedPermissions={["completeMatch"]}>
+                    <Button
+                      className="deleteBtn"
+                      onClick={() => initCompleteMatch(match.match_id)}
+                      style={{
+                        backgroundColor: "rgb(229, 231, 233)",
+                        borderColor: "rgb(229, 231, 233)",
+                        borderRadius: "50%",
+                      }}
+                    >
+                      <CheckOutlined />
+                    </Button>
+                  </PermissionButton>
                 </Tooltip>
               </div>
             </>

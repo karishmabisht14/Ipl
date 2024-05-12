@@ -1,8 +1,8 @@
 import { useReducer, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Button, Typography, Form, Input, Checkbox } from "antd";
+import { Button, Typography, Card } from "antd";
 import { AuthData } from "../auth/AuthWrapper";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import Input from "antd/es/input/Input";
 const { Text } = Typography;
 
 const Login = () => {
@@ -29,86 +29,98 @@ const Login = () => {
   };
 
   return (
-    <div className="inputs">
-      <div className="input">
-        <Text> UserName:</Text>
-        <input
-          value={formData.userName}
-          onChange={(e) => setFormData({ userName: e.target.value })}
-          type="text"
-        />
-      </div>
-      <div className="input">
-        <Text> Password:</Text>
-        <input
-          value={formData.password}
-          onChange={(e) => setFormData({ password: e.target.value })}
-          type="password"
-        />
-      </div>
+    <div className="form">
+      <Card
+        style={{
+          padding: "24px",
+          margin: "60px auto",
+          backgroundColor: "rgb(25, 57, 138)",
+        }}
+      >
+        <Text
+          style={{
+            display: "block",
+            fontSize: "24px",
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "white",
+            paddingBottom: 20,
+          }}
+        >
+          Login
+        </Text>
+        <div
+          style={{
+            width: "300px",
+            display: "block",
+            margin: "auto",
+            paddingBottom: "20px",
+          }}
+        >
+          <Text
+            style={{
+              color: "white",
+              fontSize: "18px",
+            }}
+          >
+            {" "}
+            Username
+          </Text>
+          <Input
+            value={formData.userName}
+            onChange={(e) => setFormData({ userName: e.target.value })}
+            type="text"
+          />
+        </div>
+        <div
+          style={{
+            width: "300px",
+            display: "block",
+            margin: "auto",
+            paddingBottom: "10px",
+          }}
+        >
+          <Text
+            style={{
+              color: "white",
+              fontSize: "18px",
+            }}
+          >
+            {" "}
+            Password
+          </Text>
+          <Input
+            value={formData.password}
+            onChange={(e) => setFormData({ password: e.target.value })}
+            type="password"
+          />
+          <Text style={{ display: "block", textAlign: "end", color: "white" }}>
+            Forget Password
+          </Text>
+        </div>
 
-      <div className="button">
-        <Button onClick={doLogin}>Login</Button>
-      </div>
-      {errorMessage && <div className="error">{errorMessage}</div>}
+        <Button
+          style={{
+            color: "white",
+            backgroundColor: "rgb(25, 57, 138)",
+            fontSize: "18px",
+            fontWeight: "bold",
+            // padding: 20,
+            width: "300px",
+            borderRadius: "20px",
+            height: "38px",
+            display: "block",
+            margin: "20px auto",
+          }}
+          onClick={doLogin}
+        >
+          SIGN IN
+        </Button>
+
+        {errorMessage && <div className="error">{errorMessage}</div>}
+      </Card>
     </div>
   );
-  // return (
-  //   <Form
-  //     name="normal_login"
-  //     className="login-form"
-  //     initialValues={{
-  //       remember: true,
-  //     }}
-  //     onFinish={doLogin}
-  //   >
-  //     <Form.Item
-  //       name="username"
-  //       rules={[
-  //         {
-  //           required: true,
-  //           message: "Please input your Username!",
-  //         },
-  //       ]}
-  //     >
-  //       <Input
-  //         prefix={<UserOutlined className="site-form-item-icon" />}
-  //         placeholder="Username"
-  //       />
-  //     </Form.Item>
-  //     <Form.Item
-  //       name="password"
-  //       rules={[
-  //         {
-  //           required: true,
-  //           message: "Please input your Password!",
-  //         },
-  //       ]}
-  //     >
-  //       <Input
-  //         prefix={<LockOutlined className="site-form-item-icon" />}
-  //         type="password"
-  //         placeholder="Password"
-  //       />
-  //     </Form.Item>
-  //     <Form.Item>
-  //       <Form.Item name="remember" valuePropName="checked" noStyle>
-  //         <Checkbox>Remember me</Checkbox>
-  //       </Form.Item>
-
-  //       <a className="login-form-forgot" href="">
-  //         Forgot password
-  //       </a>
-  //     </Form.Item>
-
-  //     <Form.Item>
-  //       <Button type="primary" htmlType="submit" className="login-form-button">
-  //         Log in
-  //       </Button>
-  //       {errorMessage && <div className="error">{errorMessage}</div>}
-  //     </Form.Item>
-  //   </Form>
-  // );
 };
 
 export default Login;

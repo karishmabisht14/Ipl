@@ -8,12 +8,12 @@ const Filters = ({ searchObj, setSearchObj }) => {
   const dropdown = TranslateFunction("dropdown");
   const labels = TranslateFunction("labels");
   const venues = [
-    "Narendra Modi Stadium, Ahmedabad",
-    "MA Chidambaram Stadium, Chennai",
-    "M Chinnaswamy Stadium, Bengaluru",
-    "PCA New Stadium, Mullanpur",
-    "Eden Gardens, Kolkata",
-    "Sawai Mansingh Stadium, Jaipur",
+    "Narendra Modi Stadium Ahmedabad",
+    "MA Chidambaram Stadium Chennai",
+    "M Chinnaswamy Stadium Bengaluru",
+    "PCA New Stadium Mullanpur",
+    "Eden Gardens Kolkata",
+    "Sawai Mansingh Stadium Jaipur",
   ];
 
   const teams = dropdown("teams");
